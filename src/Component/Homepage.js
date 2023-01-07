@@ -10,7 +10,7 @@ const Homepage = () => {
   const {data,isFetching}=useGetCryptosQuery(10);
   const globalStats=data?.data?.stats
   if(isFetching) return 'Loading...'
-// console.log(globalStats)
+console.log("homepage",globalStats)
   
   return (
     <>
@@ -54,9 +54,7 @@ const Homepage = () => {
           <Link to="/cryptocurrencies">Show More</Link>
         </Title>
       </div>
-      <Cryptocurrencies simplified
-
-      />
+      <Cryptocurrencies simplified />
 
       <div className="home-heading-container">
         <Title level={2} className="home-title">
@@ -66,9 +64,7 @@ const Homepage = () => {
           <Link to="/news">Show More</Link>
         </Title>
       </div>
-      <News simplified
-
-      />
+      <News simplified />
     </>
   );
 }

@@ -15,23 +15,26 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/exchanges" element={<Exchanges />} />
-              <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
+              <Route
+                path="/cryptocurrencies"
+                element={<Cryptocurrencies />}
+              />
               <Route path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route path="/news" element={<News />} />
             </Routes>
           </div>
         </Layout>
-      <div className="footer" level={5}>
-        <Typography.Title style={{ color: "white", textAlign: "center" }}>
-          Cryptoverse <br />
-          All rights reserved
-        </Typography.Title>
-        <Space>
-          <Link to="/">Home</Link>
-          <Link to="/exchange">Exchange</Link>
-          <Link to="/news">News</Link>
-        </Space>
-      </div>
+        <div className="footer" level={5}>
+          <Typography.Title style={{ color: "white", textAlign: "center" }}>
+            Cryptoverse <br />
+            All rights reserved
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchange">Exchange</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
       </div>
     </div>
   );
