@@ -17,9 +17,14 @@ export const cryptoApi = createApi({
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`),
     }),
+    getCryptosDetail: builder.query({
+      query: (coinuuid) => createRequest(`coin/${coinuuid}`),
+    }),
+    getCryptoHistory: builder.query({
+      query: ({coinuuid,timePeriod}) => createRequest(`coin/${coinuuid}/history?timeperiod=${timePeriod}`)
+    }),
   }),
 });
 
-export const {
-  useGetCryptosQuery,
-} = cryptoApi;
+export const { useGetCryptosQuery, useGetCryptosDetailQuery, useGetCryptoHistoryQuery } =
+  cryptoApi;
